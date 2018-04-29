@@ -84,14 +84,13 @@
                     }
                                 
                 }
-                unset($url_all);
                 foreach($this->urls as $key => $url)
                 {
-                    if(is_file($data_dir."/other.txt"))
+                    if(is_file("./data/".explode("/",$url)[2]."/reptile/other.txt"))
                     {
                         $Crawl_url = array_filter(explode("\r\n",file_get_contents("./data/".explode("/",$url)[2]."/reptile/other.txt")));
                     }
-                    if(is_file($data_dir."/Crawled.txt"))
+                    if(is_file("./data/".explode("/",$url)[2]."/reptile/Crawled.txt"))
                     {
                         $Crawled_url = array_filter(explode("\r\n",file_get_contents("./data/".explode("/",$url)[2]."/reptile/Crawled.txt")));
                     }
@@ -100,6 +99,7 @@
                         $do_while[] = $url;
                     }
                 }
+                unset($url_all);
             }while(count($do_while)<4);
         }
 
