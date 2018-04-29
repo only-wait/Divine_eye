@@ -48,12 +48,12 @@
                                     if(count($url_all[$url]) <= (1000/count($url_all)))
                                     {
                                         $url_all[$url][] = $data;
-                                        print "[+] Classifying {$data} as a {$url} class";
+                                        print "[+] Classifying {$data} as a {$url} class\n";
                                     }
                                 }
                                 else
                                 {
-                                    print "[-] {$data} crawled";
+                                    print "[-] {$data} crawled\n";
                                 }
                                 flock($file, LOCK_UN);
                             }
