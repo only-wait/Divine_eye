@@ -1,0 +1,1 @@
+a:3:{s:11:"/robots.txt";s:34:"/\#\s?robots.txt\s?for\s?([^#]*)/i";s:7:"/phpcms";s:3:"200";s:18:"/api.php?op=phpsso";s:3:"200";}

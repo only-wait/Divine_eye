@@ -1,0 +1,1 @@
+a:2:{s:11:"/robots.txt";s:34:"/\#\s?robots.txt\s?for\s?([^#]*)/i";s:41:"/content/templates/default/images/rss.gif";s:3:"200";}

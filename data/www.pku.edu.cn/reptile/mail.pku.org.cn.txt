@@ -1,0 +1,12 @@
+http://mail.pku.org.cn//coremail/help/index_zh_CN.jsp
+http://mail.pku.org.cn/clientoption_zh_CN.jsp
+http://mail.pku.org.cn/search_zh_CN.jsp
+http://mail.pku.org.cn/multiSecurity_zh_CN.jsp
+http://mail.pku.org.cn/recallmail_zh_CN.jsp
+http://mail.pku.org.cn/option_zh_CN.jsp
+http://mail.pku.org.cn/fulltextsearch_zh_CN.jsp
+http://mail.pku.org.cn/junkfilter_zh_CN.jsp
+http://mail.pku.org.cn/netfolder_zh_CN.jsp
+http://mail.pku.org.cn/
+http://mail.pku.org.cn/header_zh_CN.jsp
+http://mail.pku.org.cn/menu_zh_CN.jsp

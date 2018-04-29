@@ -1,0 +1,5 @@
+http://www.login.bjf.pku.edu.cn/
+http://www.login.bjf.pku.edu.cn//my/Login.jsp
+http://www.login.bjf.pku.edu.cn//Utils.do?act=lang&language=1&nexturl=/my/Login.jsp
+http://www.login.bjf.pku.edu.cn//my/RetrievePassword.jsp
+http://www.login.bjf.pku.edu.cn//ad

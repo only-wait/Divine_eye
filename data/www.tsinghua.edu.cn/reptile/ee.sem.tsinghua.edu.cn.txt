@@ -1,0 +1,15 @@
+http://ee.sem.tsinghua.edu.cn//exed/StrDM.html
+http://ee.sem.tsinghua.edu.cn//exed/FnctMng.html
+http://ee.sem.tsinghua.edu.cn//exed/TrnPln.html
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=CLG_MNG
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=ITNT_CPRT
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=FNCE_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=SBJ_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=SELL_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=LEAD_STRTG
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=LDL_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=FNC_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=HY_CRS
+http://ee.sem.tsinghua.edu.cn//exed/publicCourse.html?selectedID=CHRCT_CRS
+http://ee.sem.tsinghua.edu.cn//news/news.html

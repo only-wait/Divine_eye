@@ -1,0 +1,2 @@
+http://www.cwgl.fudan.edu.cn/WFManager/sso.jsp
+http://www.cwgl.fudan.edu.cn/exploreCond.htm

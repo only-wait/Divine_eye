@@ -1,0 +1,11 @@
+http://innovation.pkusp.com.cn//cyds/
+http://innovation.pkusp.com.cn/Introduction.aspx
+http://innovation.pkusp.com.cn//System/Login.aspx?url=/cyds/
+http://innovation.pkusp.com.cn//System/Reg.aspx
+http://innovation.pkusp.com.cn//cyds/List.aspx
+http://innovation.pkusp.com.cn//cyds/VideoList.aspx
+http://innovation.pkusp.com.cn//cyds/Contact.aspx
+http://innovation.pkusp.com.cn//cyds/Recruitment.aspx
+http://innovation.pkusp.com.cn//cyds/?location=introduce
+http://innovation.pkusp.com.cn//cyds/?location=article
+http://innovation.pkusp.com.cn/

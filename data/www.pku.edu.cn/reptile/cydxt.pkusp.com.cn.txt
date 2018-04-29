@@ -1,0 +1,6 @@
+http://cydxt.pkusp.com.cn//dxt/
+http://cydxt.pkusp.com.cn//dxt/Activity.aspx
+http://cydxt.pkusp.com.cn//dxt/List.aspx
+http://cydxt.pkusp.com.cn//dxt/Guest.aspx
+http://cydxt.pkusp.com.cn//System/Reg.aspx
+http://cydxt.pkusp.com.cn//dxt/RegistrationJlb.aspx

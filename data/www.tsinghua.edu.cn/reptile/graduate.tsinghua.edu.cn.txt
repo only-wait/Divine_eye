@@ -1,0 +1,1 @@
+http://graduate.tsinghua.edu.cn/registerController.do?m=checkRegister

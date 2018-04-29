@@ -1,0 +1,1 @@
+a:4:{s:15:"/dede/login.php";s:113:"/Powered\s?by\<a\s?href="http:\/\/www.dedecms.com"\s?title="DedeCMS¹ÙÍø">\<strong\>([^><=]*)\<\/strong\>\<\/a\>/i";s:17:"/dede/dedeajax.js";s:3:"200";s:35:"/templets/default/style/dedecms.txt";s:3:"200";s:19:"/data/admin/ver.txt";s:3:"200";}

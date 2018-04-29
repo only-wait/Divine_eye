@@ -1,0 +1,5 @@
+http://iobsfacility.fudan.edu.cn/lims/login
+http://iobsfacility.fudan.edu.cn/lims/
+http://iobsfacility.fudan.edu.cn/lims/!labs/signup/lab
+http://iobsfacility.fudan.edu.cn/lims/recovery
+http://iobsfacility.fudan.edu.cn/lims/?nobrowstip=1

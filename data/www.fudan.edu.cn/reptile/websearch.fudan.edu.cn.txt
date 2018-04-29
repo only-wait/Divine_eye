@@ -1,0 +1,14 @@
+http://websearch.fudan.edu.cn/index.html
+http://websearch.fudan.edu.cn/search_news.html
+http://websearch.fudan.edu.cn/search_dep.html
+http://websearch.fudan.edu.cn/
+http://websearch.fudan.edu.cn/search_dev.html
+http://websearch.fudan.edu.cn/article01.html
+http://websearch.fudan.edu.cn/article02.html
+http://websearch.fudan.edu.cn/article03.html
+http://websearch.fudan.edu.cn/article04.html
+http://websearch.fudan.edu.cn/article05.html
+http://websearch.fudan.edu.cn/article06.html
+http://websearch.fudan.edu.cn/article07.html
+http://websearch.fudan.edu.cn/article08.html
+http://websearch.fudan.edu.cn

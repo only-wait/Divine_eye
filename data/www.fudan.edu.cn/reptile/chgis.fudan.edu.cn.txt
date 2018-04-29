@@ -1,0 +1,12 @@
+http://chgis.fudan.edu.cn/
+http://chgis.fudan.edu.cn/../
+http://chgis.fudan.edu.cn/vercn/aboutus.asp
+http://chgis.fudan.edu.cn/vercn/news.asp
+http://chgis.fudan.edu.cn/vercn/team.asp
+http://chgis.fudan.edu.cn/vercn/projects.asp
+http://chgis.fudan.edu.cn/vercn/publications.asp
+http://chgis.fudan.edu.cn/database/databaseindex.html
+http://chgis.fudan.edu.cn/vercn/contactus.asp
+http://chgis.fudan.edu.cn/vercn/newsview.asp?id=86
+http://chgis.fudan.edu.cn/aboutus.asp
+http://chgis.fudan.edu.cn/datadis.asp

@@ -1,0 +1,5 @@
+http://map.fudan.edu.cn
+http://map.fudan.edu.cn/src/paike/index.php
+http://map.fudan.edu.cn/src/paike/classroom.php
+http://map.fudan.edu.cn/src/ip/index.php
+http://map.fudan.edu.cn/about.html
