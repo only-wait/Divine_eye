@@ -15,7 +15,8 @@
 
 		public function run()
         {
-			do{
+            $do_while = [];
+            do{
                 $url_all = [];
                 $files = [];
                 foreach($this->urls as $key => $url)
@@ -25,62 +26,78 @@
                     {
                         print "[+] Gets the ".explode("/",$url)[2]." directory cache file in other.txt\n";
                         $files[$url] = fopen("./data/".explode("/",$url)[2]."/reptile/other.txt","r");
-					}
-					else
-					{
-						$url_all[$url][] = $url;
-					}
-				}
-				if(!empty($files))
-				{
-					$istrue=false;
-					foreach($files as $url => $file)
-					{
-						$data_dir = "./data/".explode("/",$url)[2]."/reptile";
-						while(!feof($file)) {
-							if(flock($file, LOCK_EX)) {
-								$data = fgets($file);
-								$data = trim(str_replace(["\n","\r"],"",$data));
-								$Crawled_url = is_file($data_dir."/Crawled.txt")?array_filter(explode("\r\n",file_get_contents($data_dir."/Crawled.txt"))):[];
-								if(!in_array($data,$Crawled_url))
-								{
-									if(count($url_all[$url]) <= (1000/count($url_all)))
-									{
-										$url_all[$url][] = $data;
-									}
-								}
-								flock($file, LOCK_UN);
-							}
-						}
-						if($istrue)
-						{
-							break;
-						}
-						else
-						{
-							if(count($url_all,1) >= 1000)
-							{
-								$istrue = true;
-							}
-						}
-					}
-				}
-				print_r($url_all);
-				if(!empty($url_all))
-				{
-					foreach($url_all as $urlb => $urlc)
-					{
-						$res = $this->worker->rolling_curl($urlc);
-						if($content = $this->is_status($res))
-						{
-							$this->crawl($content,$urlb);
-						}
-						$this->put_contents("Crawled.txt",$urlc,$urlb);
-					}
+                    }
+                    else
+                    {
+                        $url_all[$url][] = $url;
+                    }
+                }
+                if(!empty($files))
+                {
+                    $istrue=false;
+                    foreach($files as $url => $file)
+                    {
+                        $data_dir = "./data/".explode("/",$url)[2]."/reptile";
+                        while(!feof($file)) {
+                            if(flock($file, LOCK_EX)) {
+                                $data = fgets($file);
+                                $data = trim(str_replace(["\n","\r"],"",$data));
+                                $Crawled_url = is_file($data_dir."/Crawled.txt")?array_filter(explode("\r\n",file_get_contents($data_dir."/Crawled.txt"))):[];
+                                if(!in_array($data,$Crawled_url))
+                                {
+                                    if(count($url_all[$url]) <= (1000/count($url_all)))
+                                    {
+                                        $url_all[$url][] = $data;
+                                        print $data."\n";
+                                    }
+                                }
+                                flock($file, LOCK_UN);
+                            }
+                        }
+                        if($istrue)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            if(count($url_all,1) >= 1000)
+                            {
+                                $istrue = true;
+                            }
+                        }
+                    }
+                }
+                print_r($url_all);
+                if(!empty($url_all))
+                {
+                    foreach($url_all as $urlb => $urlc)
+                    {
+                        $res = $this->worker->rolling_curl($urlc);
+                        if($content = $this->is_status($res))
+                        {
+                            $this->crawl($content,$urlb);
+                        }
+                        $this->put_contents("Crawled.txt",$urlc,$urlb);
+                    }
                                 
-				}
-				unset($url_all);
-			}while(true);
+                }
+                unset($url_all);
+                foreach($this->urls as $key => $url)
+                {
+                    if(is_file($data_dir."/other.txt"))
+                    {
+                        $Crawl_url = array_filter(explode("\r\n",file_get_contents("./data/".explode("/",$url)[2]."/reptile/other.txt")));
+                    }
+                    if(is_file($data_dir."/Crawled.txt"))
+                    {
+                        $Crawled_url = array_filter(explode("\r\n",file_get_contents("./data/".explode("/",$url)[2]."/reptile/Crawled.txt")));
+                    }
+                    if($Crawl_url == $Crawled_url)
+                    {
+                        $do_while[] = $url;
+                    }
+                }
+            }while(count($do_while)<4);
         }
 
         private function crawl($content,$urla)
