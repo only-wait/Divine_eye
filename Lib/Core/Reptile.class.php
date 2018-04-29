@@ -48,8 +48,12 @@
                                     if(count($url_all[$url]) <= (1000/count($url_all)))
                                     {
                                         $url_all[$url][] = $data;
-                                        print $data."\n";
+                                        print "[+] Classifying {$data} as a {$url} class";
                                     }
+                                }
+                                else
+                                {
+                                    print "[-] {$data} crawled";
                                 }
                                 flock($file, LOCK_UN);
                             }
@@ -67,7 +71,6 @@
                         }
                     }
                 }
-                print_r($url_all);
                 if(!empty($url_all))
                 {
                     foreach($url_all as $urlb => $urlc)
