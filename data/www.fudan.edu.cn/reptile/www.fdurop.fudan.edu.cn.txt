@@ -1,9 +1,0 @@
-http://www.fdurop.fudan.edu.cn/./
-http://www.fdurop.fudan.edu.cn/./map.php
-http://www.fdurop.fudan.edu.cn/listdocCrawler.php
-http://www.fdurop.fudan.edu.cn/scholar.php
-http://www.fdurop.fudan.edu.cn/prof.php
-http://www.fdurop.fudan.edu.cn/projList.php?pj=1
-http://www.fdurop.fudan.edu.cn/projList.php?pj=2
-http://www.fdurop.fudan.edu.cn/projList.php?pj=3
-http://www.fdurop.fudan.edu.cn/projList.php?pj=4

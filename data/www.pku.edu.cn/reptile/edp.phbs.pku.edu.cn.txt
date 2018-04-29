@@ -1,9 +1,0 @@
-http://edp.phbs.pku.edu.cn/
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=lists&catid=1438&on=0
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=lists&catid=1438&on=1
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=lists&catid=1677
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=lists&catid=1438
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=show&catid=1435&id=3
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=show&catid=1435&id=2
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=show&catid=1436&id=7
-http://edp.phbs.pku.edu.cn/index.php?m=content&c=index&a=lists&catid=1453

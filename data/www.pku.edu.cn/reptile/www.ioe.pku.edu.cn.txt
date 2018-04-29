@@ -1,7 +1,0 @@
-http://www.ioe.pku.edu.cn/
-http://www.ioe.pku.edu.cn/./news/about.html
-http://www.ioe.pku.edu.cn/./news/newsroom.html
-http://www.ioe.pku.edu.cn/./news/courses.html
-http://www.ioe.pku.edu.cn/./test-register/login.php
-http://www.ioe.pku.edu.cn/../news/news3.html
-http://www.ioe.pku.edu.cn/../news/news2.html

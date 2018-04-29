@@ -1,5 +1,0 @@
-http://ticket.artmuseum.tsinghua.edu.cn//Home/QuestionAnswering
-http://ticket.artmuseum.tsinghua.edu.cn//Home/SchedulingList
-http://ticket.artmuseum.tsinghua.edu.cn//Home/Announcement/3
-http://ticket.artmuseum.tsinghua.edu.cn//Home/SchedulingList/2018-03-01
-http://ticket.artmuseum.tsinghua.edu.cn//Home/SchedulingList/2018-05-01

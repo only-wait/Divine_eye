@@ -1,6 +1,0 @@
-http://ac.cs.tsinghua.edu.cn/index.html
-http://ac.cs.tsinghua.edu.cn/curriculum.html
-http://ac.cs.tsinghua.edu.cn/faculty.html
-http://ac.cs.tsinghua.edu.cn/application.html
-http://ac.cs.tsinghua.edu.cn/accomodation.html
-http://ac.cs.tsinghua.edu.cn/

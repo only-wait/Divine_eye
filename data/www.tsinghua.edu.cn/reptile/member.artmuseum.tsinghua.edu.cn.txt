@@ -1,2 +1,0 @@
-http://member.artmuseum.tsinghua.edu.cn/forget
-http://member.artmuseum.tsinghua.edu.cn/register

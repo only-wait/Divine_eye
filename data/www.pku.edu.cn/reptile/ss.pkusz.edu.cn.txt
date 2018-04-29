@@ -1,4 +1,0 @@
-http://ss.pkusz.edu.cn//oce_infos/new
-http://ss.pkusz.edu.cn//oce_infos/login
-http://ss.pkusz.edu.cn//scbb_infos/stl_check_login?from=1
-http://ss.pkusz.edu.cn//scbb_infos/stl_check_login?from=2

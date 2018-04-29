@@ -1,4 +1,0 @@
-http://ss.nsd.pku.edu.cn/User/UserHelper.aspx
-http://ss.nsd.pku.edu.cn/User/NewSignUp/StudentI/DownLoad.aspx
-http://ss.nsd.pku.edu.cn/User/RegisterManage/RegisterMain.ashx
-http://ss.nsd.pku.edu.cn/User/UserPassBack.aspx

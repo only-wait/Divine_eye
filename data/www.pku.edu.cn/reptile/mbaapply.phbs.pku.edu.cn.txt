@@ -1,2 +1,0 @@
-http://mbaapply.phbs.pku.edu.cn//index/forgetpwd
-http://mbaapply.phbs.pku.edu.cn//index/register

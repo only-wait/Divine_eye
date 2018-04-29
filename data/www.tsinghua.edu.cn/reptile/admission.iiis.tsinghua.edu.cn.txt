@@ -1,9 +1,0 @@
-http://admission.iiis.tsinghua.edu.cn/
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=namelist
-http://admission.iiis.tsinghua.edu.cn/./
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=apply
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=reg&a=index
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=program
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=groupphoto
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=accommodation
-http://admission.iiis.tsinghua.edu.cn//2018/index.php?c=main&a=contact

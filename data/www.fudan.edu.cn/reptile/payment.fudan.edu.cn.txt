@@ -1,2 +1,0 @@
-http://payment.fudan.edu.cn//pay_en/index.html
-http://payment.fudan.edu.cn//index.html

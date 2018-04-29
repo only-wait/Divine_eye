@@ -1,7 +1,0 @@
-http://www.mech.pku.edu.cn/student.htm
-http://www.mech.pku.edu.cn/admission.htm
-http://www.mech.pku.edu.cn/news.htm
-http://www.mech.pku.edu.cn/speech.htm
-http://www.mech.pku.edu.cn/robot/iclab/index.htm
-http://www.mech.pku.edu.cn/contact.htm
-http://www.mech.pku.edu.cn/robot/iclab/news.htm

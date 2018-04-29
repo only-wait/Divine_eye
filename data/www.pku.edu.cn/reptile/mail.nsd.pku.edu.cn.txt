@@ -1,2 +1,0 @@
-http://mail.nsd.pku.edu.cn//cgi-bin/readtemplate?check=false&t=biz_rf_portal
-http://mail.nsd.pku.edu.cn//cgi-bin/bizmail_portal?t=bizmail_customer_service_imc

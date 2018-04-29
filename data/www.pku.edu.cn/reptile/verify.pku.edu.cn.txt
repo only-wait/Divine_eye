@@ -1,5 +1,0 @@
-http://verify.pku.edu.cn/
-http://verify.pku.edu.cn/byzs.jsp
-http://verify.pku.edu.cn/xwzs.jsp
-http://verify.pku.edu.cn/byzs_en.jsp
-http://verify.pku.edu.cn/xwzs_en.jsp
