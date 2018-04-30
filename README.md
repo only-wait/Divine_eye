@@ -1,2 +1,2 @@
 # Divine_eye
-# Usage:php index.php [url1,url2,...,urln] threads
+# Usage:php index.php [url1,url2,...,urln] threads_number
