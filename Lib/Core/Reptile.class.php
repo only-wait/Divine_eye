@@ -100,7 +100,7 @@
                     }
                 }
                 unset($url_all);
-            }while(count($do_while)<4);
+            }while(count($do_while)<count($this->urls));
         }
 
         private function crawl($content,$urla)
