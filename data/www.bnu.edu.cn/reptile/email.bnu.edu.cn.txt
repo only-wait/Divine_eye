@@ -1,0 +1,4 @@
+http://email.bnu.edu.cn//coremail/help/index_zh_CN.jsp
+http://email.bnu.edu.cn//coremail/forgetpwd.jsp
+http://email.bnu.edu.cn//coremail/help/mobile_zh_CN.jsp
+http://email.bnu.edu.cn//coremail/help/coremail_zh_CN.jsp

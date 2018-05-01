@@ -104,9 +104,9 @@
                                         unset($Rex_url[0]);
                                         $Crawled_url = $this->add_host($url,$this->array_not_empty($Rex_url));
                                         $this->put_contents("other.txt",$Crawled_url);
-                                        if($urls = $this->check_host($this->host,$Crawled_url))
+                                        if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
-                                                $this->put_contents("{$this->host}.txt",$urls);
+                                            $this->put_contents(explode("/", $url)[2].".txt",$urls);
                                         }
                                         print "[+] url:{$url}\n";
                                         print "[*] Currently crawls to ".count($urls)." records\n";
@@ -121,17 +121,17 @@
                 {
                         foreach($crawled_url as $curl)
                         {
-                                if($host == explode("/", $curl)[2])
-                                {
-                                        array_push($urls,$curl);
-                                }
+                            if($host == explode("/", $curl)[2])
+                            {
+                                array_push($urls,$curl);
+                            }
                         }
                 }
                 else
                 {
                         if(strstr(explode("/", $crawled_url)[2],$host[1]))
                         {
-                                $urls = $crawled_url;
+                            $urls = $crawled_url;
                         }
                 }
                 return $urls;
