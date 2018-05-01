@@ -7,6 +7,10 @@
 		private $cmsdic_root = "Cms-dictionary";
 		private $cms_success = [];
 
+		public function __construct($urls)
+		{
+			
+		}
 		#运行函数
 		public function run($urls=[],$user_defined_dic=false)
 		{

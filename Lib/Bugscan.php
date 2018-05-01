@@ -4,8 +4,18 @@
 		function __construct($url,$threads_number)
 		{
 			$pool = new \Pool($threads_number,"\Lib\Core\Request_http",array());
-			$pool->submit(new \Lib\Core\Reptile($url));
+			if(is_array($url))
+			{
+				foreach($url as $u)
+				{
+					$pool->submit(new \Lib\Core\Reptile($u));
+					#$pool->submit(new \Lib\Core\Cmsrecognition($u));
+				}
+			}
 			$pool->shutdown();
+			// $pool->collect(function($work){
+			//     return $work->get_true();
+			// });
 		}
 		static public function start($url,$threads_number)
 		{
