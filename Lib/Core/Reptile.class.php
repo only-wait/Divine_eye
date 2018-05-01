@@ -99,7 +99,7 @@
                                 if(count($Rex_url) == 4)
                                 {
                                         unset($Rex_url[0]);
-                                        $Crawled_url = $this->add_host($url,$this->array_not_empty($Rex_url));
+                                        $Crawled_url = $this->add_host($this->url,$this->array_not_empty($Rex_url));
                                         $this->put_contents("other.txt",$Crawled_url);
                                         if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
@@ -140,7 +140,7 @@
                 {
                         if($key>2)
                         {
-                                unset($host[$key]);
+                            unset($host[$key]);
                         }
                 }
                 $host = implode("/", $host);
