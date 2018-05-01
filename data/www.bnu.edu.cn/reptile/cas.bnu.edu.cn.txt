@@ -1,2 +1,0 @@
-http://cas.bnu.edu.cn/pwd
-http://cas.bnu.edu.cn/

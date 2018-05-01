@@ -1,8 +1,0 @@
-http://opendata.pku.edu.cn/
-http://opendata.pku.edu.cn//
-http://opendata.pku.edu.cn//about.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6
-http://opendata.pku.edu.cn//handbook.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6
-http://opendata.pku.edu.cn//competition-2018.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6
-http://opendata.pku.edu.cn//registry-competition.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6
-http://opendata.pku.edu.cn//dataverseuser.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6?editMode=CREATE
-http://opendata.pku.edu.cn//loginpage.xhtml;jsessionid=b8ceb3a062a557a8fbf090ee34d6?redirectPage=dataverse.xhtml

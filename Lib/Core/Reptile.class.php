@@ -26,7 +26,6 @@
 
 		public function run()
         {
-            print "[+] {$this->host} start\n";
             $do_while = true;
             do{
                 $crawl = [];
@@ -34,7 +33,7 @@
                 $url_all=[];
                 if(is_file($this->other))
                 {
-                    print "[+] Gets the ".$this->host." directory cache file in other.txt\n";
+                    #print "[+] Gets the ".$this->host." directory cache file in other.txt\n";
                     $crawl = array_filter(explode("\r\n",file_get_contents($this->other)));
                     $crawled = array_filter(explode("\r\n",file_get_contents($this->crawled)));
                 }
@@ -85,7 +84,6 @@
                 }
             }while($do_while);
             $this->istrue = true;
-            print "[+] {$this->host} end\n";
         }
 
         public function get_true()
