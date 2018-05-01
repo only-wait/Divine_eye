@@ -57,6 +57,11 @@
                                 break;
                             }
                         }
+                        else
+                        {
+                            print "[-] have a {$u} crawled\n";
+                            continue;
+                        }
                     }
                 }
                 if(!empty($url_all))
@@ -66,7 +71,6 @@
                     if($content = $this->is_status($res))
                     {
                         $this->crawl($content);
-                        $this->put_contents("Crawled.txt",$url_all);
                     }
                 }
                 if(is_file($this->other))
@@ -101,6 +105,7 @@
                                         unset($Rex_url[0]);
                                         $Crawled_url = $this->add_host($this->url,$this->array_not_empty($Rex_url));
                                         $this->put_contents("other.txt",$Crawled_url);
+                                        $this->put_contents("Crawled.txt",$url);
                                         if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
                                             $this->put_contents(explode("/", $url)[2].".txt",$urls);
