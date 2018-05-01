@@ -33,7 +33,6 @@
                 $url_all=[];
                 if(is_file($this->other))
                 {
-                    #print "[+] Gets the ".$this->host." directory cache file in other.txt\n";
                     $crawl = array_filter(explode("\r\n",file_get_contents($this->other)));
                     $crawled = array_filter(explode("\r\n",file_get_contents($this->crawled)));
                 }
@@ -80,7 +79,7 @@
                 }
                 if($this->Crawl_url == $this->Crawled_url)
                 {
-                        $do_while = false;
+                    $do_while = false;
                 }
             }while($do_while);
             $this->istrue = true;
@@ -187,7 +186,7 @@
                 foreach ($array as $value)
                 {
                         $url = array_merge($url,array_filter($value,function($value){
-                                if(!strstr($value,"javascript") && !strstr($value,"360") && !strstr($value,"qq") && !strstr($value,"weibo") && !strstr($value,"@") && !empty($value))
+                                if(!strstr($value,"javascript") && !strstr($value,"360") && !strstr($value,"qq") && !strstr($value,"weibo") && !strstr($value,"163") && !strstr($value,"@") && !empty($value))
                                 {
                                         return true;
                                 }
