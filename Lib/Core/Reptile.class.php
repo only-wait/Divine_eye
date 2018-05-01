@@ -31,7 +31,7 @@
                 $crawl = [];
                 $crawled = [];
                 $url_all=[];
-                if(is_file($this->other))
+                if(is_file($this->crawled) && is_file($this->other))
                 {
                     $crawl = array_filter(explode("\r\n",file_get_contents($this->other)));
                     $crawled = array_filter(explode("\r\n",file_get_contents($this->crawled)));
@@ -48,14 +48,7 @@
                     {
                         if(!in_array($u,$crawled))
                         {
-                            if(count($url_all)<=1000)
-                            {
-                                $url_all[] = $u;
-                            }
-                            else
-                            {
-                                break;
-                            }
+                            $url_all[] = $u;
                         }
                         else
                         {
@@ -71,19 +64,8 @@
                     if($content = $this->is_status($res))
                     {
                         $this->crawl($content);
+                        $this->put_contents("Crawled.txt",$url_all);
                     }
-                }
-                if(is_file($this->other))
-                {
-                    $this->Crawl_url = array_filter(explode("\r\n",file_get_contents($this->other)));
-                }
-                if(is_file($this->crawled))
-                {
-                    $this->Crawled_url = array_filter(explode("\r\n",file_get_contents($this->crawled)));
-                }
-                if($this->Crawl_url == $this->Crawled_url)
-                {
-                    $do_while = false;
                 }
             }while($do_while);
             $this->istrue = true;
@@ -104,8 +86,11 @@
                                 {
                                         unset($Rex_url[0]);
                                         $Crawled_url = $this->add_host($this->url,$this->array_not_empty($Rex_url));
+                                        if(is_file($this->other))
+                                        {
+                                            unlink($this->other);
+                                        }
                                         $this->put_contents("other.txt",$Crawled_url);
-                                        $this->put_contents("Crawled.txt",$url);
                                         if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
                                             $this->put_contents(explode("/", $url)[2].".txt",$urls);
