@@ -5,6 +5,7 @@
 		private $urls=[];
 		#定义不允许爬取的后缀
 		private $ext = ["jpg","gif","png","bmp","pdf","mp4","mp3","doc","rar","docx","xls","xlsx","zip","7z","apk"];
+        private $Rex = "/\<\s?a[\s?\w=['|\"]?.*['|\"]?]?href=['|\"]?([^\"'><\s]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>[[\x80-\xff]?|.?]?\<\s?\/a\s?\>|\<\s?from[\s?\w=['|\"]?.*['|\"]?]?action=['|\"]?([^\"'><]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/from\s?\>|\<\s?iframe[\s?\w=['|\"]?.*['|\"]?]?\s?src=[\"|']?([^\"'><]*)[\"|']?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/iframe\s?\>/i";#定义正则表达式
 		public function __construct($urls=[])
         {
 			if(!empty($urls))
@@ -107,8 +108,7 @@
         {
                 foreach($content as $url => $val)
                 {
-                        $Rex = "/\<\s?a[\s?\w=['|\"]?.*['|\"]?]?href=['|\"]?([^\"'><\s]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>[[\x80-\xff]?|.?]?\<\s?\/a\s?\>|\<\s?from[\s?\w=['|\"]?.*['|\"]?]?action=['|\"]?([^\"'><]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/from\s?\>|\<\s?iframe[\s?\w=['|\"]?.*['|\"]?]?\s?src=[\"|']?([^\"'><]*)[\"|']?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/iframe\s?\>/i";#定义正则表达式
-                        if(preg_match_all($Rex,$val,$Rex_url))
+                        if(preg_match_all($this->Rex,$val,$Rex_url))
                         {
                                 if(count($Rex_url) == 4)
                                 {

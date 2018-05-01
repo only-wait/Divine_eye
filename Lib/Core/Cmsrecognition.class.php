@@ -1,6 +1,6 @@
 <?php
-	// namespace Lib\Core;
-	class Cmsrecognition
+	namespace Lib\Core;
+	class Cmsrecognition extends \Threaded
 	{
 		private $urls=[];
 		private $cmsdic_url=[];
@@ -106,29 +106,6 @@
 					$this->cmsdic_url[str_replace(".txt", "" , $file)] = array_filter(unserialize(file_get_contents($this->cmsdic_root."/{$file}")));
 				}
 			}
-		}
-		#发送请求函数
-		private function Request_http($url,$status=false)
-		{
-			$ch = curl_init ();  
-			curl_setopt($ch, CURLOPT_URL,$url);  
-			curl_setopt($ch, CURLOPT_TIMEOUT, 5);  
-			curl_setopt($ch, CURLOPT_HEADER, FALSE);  
-			curl_setopt($ch, CURLOPT_NOBODY, FALSE);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);  
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, FALSE);  
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-			$content = curl_exec($ch);
-			if($status)
-			{
-				$http = curl_getinfo($ch,CURLINFO_HTTP_CODE);
-			}
-			else
-			{
-				$http = $content;
-			}
-			curl_close($ch);
-			return $http;
 		}
 	}
 ?>

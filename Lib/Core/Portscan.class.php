@@ -1,6 +1,6 @@
 <?php
 	namespace Lib\Core;
-	class Portscan{
+	class Portscan extends \Threaded{
 		private $host;
 		private $ports = [21,22,23,25,79,80,110,135,137,138,139,143,443,445,1433,3306,3389];
 		private $ports_msg = [21=>'Ftp',22=>'SsH',23=>'Telnet',25=>'Smtp',79=>'Finger',80=>'Http',110=>'Pop3',135=>'Location Service',137=>'Netbios-NS',138=>'Netbios-DGM',139=>'Netbios-SSN',143=>'IMAP',443=>'Https',445=>'Microsoft-DS',1433=>'MSSQL',3306=>'MYSQL',3389=>'Terminal Services'];
