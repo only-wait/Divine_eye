@@ -13,9 +13,9 @@
 				}
 			}
 			$pool->shutdown();
-			// $pool->collect(function($work){
-			//     return $work->get_true();
-			// });
+			$pool->collect(function($work){
+			    return $work->get_true();
+			});
 		}
 		static public function start($url,$threads_number)
 		{

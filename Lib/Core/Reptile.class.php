@@ -26,6 +26,7 @@
 
 		public function run()
         {
+            print "[+] {$this->host} start\n";
             $do_while = true;
             do{
                 $crawl = [];
@@ -39,7 +40,7 @@
                 }
                 else
                 {
-                    print "[+] A new crawl is under way\n";
+                    print "[+] {$this->host} A new crawl is under way\n";
                     $url_all[] = $this->url;
                 }
 
@@ -49,12 +50,20 @@
                     {
                         if(!in_array($u,$crawled))
                         {
-                            $url_all[] = $u;
+                            if(count($url_all)<=1000)
+                            {
+                                $url_all[] = $u;
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
                 if(!empty($url_all))
                 {
+                    sleep(2);
                     $res = $this->worker->rolling_curl($url_all);
                     if($content = $this->is_status($res))
                     {
@@ -76,6 +85,7 @@
                 }
             }while($do_while);
             $this->istrue = true;
+            print "[+] {$this->host} end\n";
         }
 
         public function get_true()
@@ -193,7 +203,7 @@
                 $content = [];
                 foreach($info as $key=>$val)
                 {
-                        $content[$key] = $info[$key]["results"];
+                    $content[$key] = $info[$key]["results"];
                 }
                 return $content;
 
