@@ -64,8 +64,10 @@
                             $this->crawl($content);
                         }
                         $this->put_contents("crawled.txt",$file_name);
+                        print "[*] {$this->host} ".(count(scandir($this->reptile_dir))-3)." subdomains crawled\n";
                     }
                 }
+                $crawled_data = array_filter(explode("\r\n",file_get_contents($this->reptile_dir."crawled.txt")));
             }while($do_while);
             $this->istrue = true;
         }
