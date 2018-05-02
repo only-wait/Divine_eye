@@ -6,12 +6,9 @@
 		#定义不允许爬取的后缀
 		private $ext = ["jpg","gif","png","bmp","pdf","mp4","mp3","doc","rar","docx","xls","xlsx","zip","7z","apk"];
         private $Rex = "/\<\s?a[\s?\w=['|\"]?.*['|\"]?]?href=['|\"]?([^\"'><\s]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>[[\x80-\xff]?|.?]?\<\s?\/a\s?\>|\<\s?from[\s?\w=['|\"]?.*['|\"]?]?action=['|\"]?([^\"'><]*)['|\"]?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/from\s?\>|\<\s?iframe[\s?\w=['|\"]?.*['|\"]?]?\s?src=[\"|']?([^\"'><]*)[\"|']?[\s?\w=['|\"]?.*['|\"]?]?\s?\>.?\<\s?\/iframe\s?\>/i";#定义正则表达式
-        private $other;
-        private $crawled;
         private $istrue = false;
-        private $Crawl_url;
-        private $Crawled_url;
         private $host;
+        private $reptile_dir;
 
 		public function __construct($url)
         {
@@ -19,8 +16,7 @@
 			{
 				$this->url = $url;
                 $this->host = explode("/",$url)[2];
-                $this->other ="./data/{$this->host}/reptile/other.txt";
-                $this->crawled = "./data/{$this->host}/reptile/Crawled.txt";
+                $this->reptile_dir ="./data/{$this->host}/reptile/";
 			}
 		}
 
@@ -31,10 +27,28 @@
                 $crawl = [];
                 $crawled = [];
                 $url_all=[];
-                if(is_file($this->crawled) && is_file($this->other))
+                if(is_dir($this->reptile_dir))
                 {
-                    $crawl = array_filter(explode("\r\n",file_get_contents($this->other)));
-                    $crawled = array_filter(explode("\r\n",file_get_contents($this->crawled)));
+                    if(is_file($this->reptile_dir."crawled.txt"))
+                    {
+                        $crawled_data = array_filter(explode("\r\n",file_get_contents($this->reptile_dir."crawled.txt")));
+                    }
+                    else
+                    {
+                        $crawled_data = [];
+                    }
+                    foreach(scandir($this->reptile_dir) as $val)
+                    {
+                        if($val!="." && $val!=".." && $val != "crawled.txt")
+                        {
+                            if(!in_array($val,$crawled_data))
+                            {
+                                $url_all[] = array_filter(explode("\r\n",file_get_contents($this->reptile_dir.$val)));
+                                $this->put_contents("crawled.txt",$val);
+                            }
+                        }
+                    }
+                    print_r($url_all);exit;
                 }
                 else
                 {
@@ -53,7 +67,6 @@
                         else
                         {
                             print "[-] have a {$u} crawled\n";
-                            continue;
                         }
                     }
                 }
@@ -64,7 +77,6 @@
                     if($content = $this->is_status($res))
                     {
                         $this->crawl($content);
-                        $this->put_contents("Crawled.txt",$url_all);
                     }
                 }
             }while($do_while);
@@ -90,7 +102,6 @@
                                         {
                                             unlink($this->other);
                                         }
-                                        $this->put_contents("other.txt",$Crawled_url);
                                         if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
                                             $this->put_contents(explode("/", $url)[2].".txt",$urls);
