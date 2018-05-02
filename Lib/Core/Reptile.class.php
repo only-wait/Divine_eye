@@ -26,7 +26,7 @@
             do{
                 $crawl = [];
                 $crawled = [];
-                $url_all=[];
+                $url_all = [];
                 if(is_dir($this->reptile_dir))
                 {
                     if(is_file($this->reptile_dir."crawled.txt"))
@@ -43,40 +43,27 @@
                         {
                             if(!in_array($val,$crawled_data))
                             {
-                                $url_all[] = array_filter(explode("\r\n",file_get_contents($this->reptile_dir.$val)));
-                                $this->put_contents("crawled.txt",$val);
+                                $url_all[$val] = array_filter(explode("\r\n",file_get_contents($this->reptile_dir.$val)));
                             }
                         }
                     }
-                    print_r($url_all);exit;
                 }
                 else
                 {
                     print "[+] {$this->host} A new crawl is under way\n";
-                    $url_all[] = $this->url;
-                }
-
-                if(!empty($crawl) && !empty($crawled))
-                {
-                    foreach($crawl as $u)
-                    {
-                        if(!in_array($u,$crawled))
-                        {
-                            $url_all[] = $u;
-                        }
-                        else
-                        {
-                            print "[-] have a {$u} crawled\n";
-                        }
-                    }
+                    $url_all[""] = [$this->url];
                 }
                 if(!empty($url_all))
                 {
                     sleep(2);
-                    $res = $this->worker->rolling_curl($url_all);
-                    if($content = $this->is_status($res))
+                    foreach($url_all as $file_name=>$u)
                     {
-                        $this->crawl($content);
+                        $res = $this->worker->rolling_curl($u);
+                        if($content = $this->is_status($res))
+                        {
+                            $this->crawl($content);
+                        }
+                        $this->put_contents("crawled.txt",$file_name);
                     }
                 }
             }while($do_while);
@@ -98,16 +85,16 @@
                                 {
                                         unset($Rex_url[0]);
                                         $Crawled_url = $this->add_host($this->url,$this->array_not_empty($Rex_url));
-                                        if(is_file($this->other))
+                                        foreach($Crawled_url as $u)
                                         {
-                                            unlink($this->other);
+                                            $this->put_contents(explode("/", $u)[2].".txt",$u);
                                         }
                                         if($urls = $this->check_host(explode("/", $url)[2],$Crawled_url))
                                         {
                                             $this->put_contents(explode("/", $url)[2].".txt",$urls);
+                                            print "[+] url:{$url}\n";
+                                            print "[*] Currently crawls to ".count($urls)." records\n";
                                         }
-                                        print "[+] url:{$url}\n";
-                                        print "[*] Currently crawls to ".count($urls)." records\n";
                                 }
                         }
                 }
